@@ -1,0 +1,3 @@
+type MutationProps = {
+  onSuccess?: () => void;
+};
