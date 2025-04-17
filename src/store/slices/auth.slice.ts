@@ -54,7 +54,7 @@ const authSlice = createSlice({
         state.authenticated = false;
       })
       .addCase(signIn.fulfilled, (state, action) => {
-        const token = action.payload.token;
+        const token = action.payload.data.token;
 
         state.authenticated = true;
         state.loading = false;
@@ -65,7 +65,7 @@ const authSlice = createSlice({
         state.authenticated = false;
       })
       .addCase(signUp.fulfilled, (state, action) => {
-        const token = action.payload.token;
+        const token = action.payload.data.token;
 
         state.authenticated = true;
         state.loading = false;

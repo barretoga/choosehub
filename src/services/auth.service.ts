@@ -2,11 +2,15 @@ import { httpClient } from "./api";
 
 const AUTH_DOMAIN = "/auth";
 
-export const signIn = (body: SignInRequest): Promise<{ token: string }> => {
+export const signIn = (
+  body: SignInRequest
+): Promise<{ data: { token: string } }> => {
   return httpClient.post(`${AUTH_DOMAIN}/authenticate`, body);
 };
 
-export const signUp = (body: SignUpRequest): Promise<{ token: string }> => {
+export const signUp = (
+  body: SignUpRequest
+): Promise<{ data: { token: string } }> => {
   return httpClient.post(`${AUTH_DOMAIN}/register`, body);
 };
 
